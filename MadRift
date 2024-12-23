@@ -1,0 +1,14 @@
+local MadRift = game:GetObjects(12622843676)
+local Prompt = Instance.new("ProximityPrompt")
+local RiftTypes = {"Transpent, TranspentOnce"}
+
+Rift.Position = 273.26788330078125, -0.4740999937057495, -8.60204029083252
+Prompt.Parent = Rift
+Prompt.ActionText = "Transpent"
+Prompt.ObjectText = "Rift"
+Prompt.Style = "Custom"
+Prompt.HoldDuration = 2
+
+Prompt.Triggered:Connect(function(playerWhoTriggered)
+  playerWhoTriggered.Character.Humanoid.Health = 0
+end)
